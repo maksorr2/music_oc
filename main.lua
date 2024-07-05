@@ -63,8 +63,8 @@ function drawRectangle(x, y, width, height, bg, fg, text, value)
         gpu.fill(bottomRight, bottomLeft,  width, height, text)
     elseif value == "centerX" then
         gpu.fill(centerX, y, width, height, text)
-    elseif value == "center" then
-        gpu.fill(centerX, centerY, width, height, text)
+    elseif value == "centerY" then
+        drawPixel(x, centerY, bg, fg, text)
     end
     gpu.setBackground(oldbg)
     gpu.setForeground(oldfg)
@@ -96,8 +96,6 @@ function drawString(text, x, y, bg, fg, value)
         drawPixel(centerX, y, bg, fg, text)
     elseif value == "centerY" then
         drawPixel(x, centerY, bg, fg, text)
-    elseif value == "center" then
-        gpu.fill(centerX, centerY, bg, fg, text)
     end
     return x, y, value
 end
