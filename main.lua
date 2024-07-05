@@ -97,7 +97,7 @@ function drawString(text, x, y, bg, fg, value)
     elseif value == "centerY" then
         drawPixel(x, centerY, bg, fg, text)
     elseif value == "center" then
-        gpu.fill(centerX, centerY, width, height, text)
+        gpu.fill(centerX, centerY, bg, fg, text)
     end
     return x, y, value
 end
